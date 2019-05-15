@@ -1,0 +1,9 @@
+<?php
+echo <<< HTML
+<html>
+<head>
+<meta http-equiv="Refresh" content="0;url=./controller/index.php?page=index">
+</head>
+</html>
+HTML;
+?>
