@@ -15,13 +15,13 @@ function HTML_init($page,$res=null){
     }else{
       HTML_nav($page);
     }
-    HTML_login();
+    //HTML_login();
     switch($page){
       case "index":HTML_index();break;
-      /*case "catalogo":HTML_catalogo($res);break;
+      case "catalogo":HTML_catalogo($res);break;
       case "busqueda":HTML_busqueda();break;
       case "tiendas":HTML_tiendas();break;
-      case "pedidos":HTML_pedidos();break;*/
+      case "pedidos":HTML_pedidos();break;
       default:HTML_404();break;
     }
     HTML_aside();
@@ -67,9 +67,11 @@ function HTML_initEnd(){
       <meta charset="utf-8">
       <link type="text/css" rel="stylesheet" href="../static/index.css">
       <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+      <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&display=swap" rel="stylesheet">
       <meta name="autor" content="OscarOsorio">
       <meta name="description" content="Practica 1 TW Ejercicio 4 - Libreria">
-      <title>Titulo here</title>
+      <title></title>
       </head>
     HTML;
   }
@@ -78,11 +80,11 @@ function HTML_initEnd(){
     echo <<< HTML
       <header>
       <div id="h-izq">
-      <a href="./index.html"><img id="indexImg" src="../images/book2.png" ></a>
+      <a href="./index.html"><img id="indexImg" src="../images/index.png" ></a>
       </div>
       <div id="h-der">
-      <h1>Titulo here</h1>
-      <p id="title">Subtitulo here</p>
+      <h1>Quéjate! No te calles</h1>
+      <p id="title">Página web para notificar sobre incidencias</p>
       </div>
       </header>
     HTML;
@@ -171,8 +173,11 @@ function HTML_initEnd(){
   function HTML_aside(){
     echo <<< HTML
       <aside>
+    HTML;
+    HTML_login();
+    echo <<< HTML
       <div id="topSell">
-      <p><strong>Más vendidos</strong></p>
+      <p><strong>Los que más opinan: </strong></p>
       <ul>
       <li>El quijote</li>
       <li>Ulises</li>
@@ -180,7 +185,7 @@ function HTML_initEnd(){
       </ul>
       </div>
       <div id="topPopular">
-      <p><strong>Más populares</strong></p>
+      <p><strong>Los que más añaden: </strong></p>
       <ul>
       <li>Charles Dickens</li>
       <li>Julio Verne</li>
@@ -240,7 +245,15 @@ function HTML_initEnd(){
       echo <<< HTML
       <div id="login">
         <form action="../controller/login.php" method="post">
-            Usuario <input type="search" name="user"/> Contraseña <input type="search" name="pass"/> <input type="submit" value="Buscar"/>
+            Usuario
+            <br>
+            <input type="search" name="user"/>
+            <br>
+            Contraseña
+            <br>
+            <input type="search" name="pass"/>
+            <br>
+            <input type="submit" value="Buscar"/>
         </form>
       </div>
       HTML;
