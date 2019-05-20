@@ -199,28 +199,15 @@ function HTML_initEnd(){
   function HTML_footer(){
     echo <<< HTML
     <footer>
-    <div id="ubicacion">
-    <ul>
-    <li>Granada</li>
-    <ul>
-    <li>Reyes Catolicos (555 112233)</li>
-    <li>Avda Dilar (555 332211)</li>
-    </ul>
-    <li>Málaga</li>
-    <ul>
-    <li>Marqués de Larios (555 221133)</li>
-    </ul>
-    </ul>
-    </div>
     <div id="rsFoot">
     <img src="../images/twitter.png">
     <img src="../images/facebook.png">
     <img src="../images/pinterest.png">
     <img src="../images/other.png">
+    </div>
     <div id="contacto">
     <img id="emailImg" src="../images/email.png">
-    <p id="emailDir">lectordelibros@gemeil.com</p>
-    </div>
+    <p id="emailDir">quejatenocalles@gemeil.com</p>
     </div>
     <div id="infoExtra">
     <ul>

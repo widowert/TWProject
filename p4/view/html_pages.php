@@ -35,12 +35,28 @@ function HTML_busquedaIncidencia(){
     </div>
     <div id="buscarIncidencia">
     <h2>Incidencias que contengan:</h2>
-    Texto en búsqueda <input type="search" name="busqueda"/>
-    <br>
-    Lugar <input type="search" name="lugar"/>
+    Texto en búsqueda <br><input type="search" name="busqueda"/>
+    <br><br>
+    Lugar <br><input type="search" name="lugar"/>
     </div>
     <div id="estadoIncidencia">
+      <h2>Estado:</h2>
+      Pendiente <input type="checkbox" name="estado" value="pendiente">
+      Comprobada <input type="checkbox" name="estado" value="comprobada">
+      Tramitada <input type="checkbox" name="estado" value="tramitada">
+      Irresoluble <input type="checkbox" name="estado" value="irresoluble">
+      Resuelta <input type="checkbox" name="estado" value="resuelta">
     </div>
+    <br>
+    <select name="numIncidencias">
+    <option value="None" disabled selected>Número de incidencias por página</option>
+    <option value="5">5 items</option>
+    <option value="10">10 items</option>
+    <option value="15">15 items</option>
+  </select>
+    </form>
+    </div>
+    <div class="incidencias">
     </div>
   HTML;
 }
@@ -270,7 +286,9 @@ function HTML_Loginok(){
   </html>
   HTML;
 }
-
+function HTML_incidencia(){
+  
+}
 function HTML_resultadosLibros($res){
   HTML_init("catalogo",$res);
 }

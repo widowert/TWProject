@@ -104,7 +104,7 @@ a.link{
 .evento{
   display:flex;
   justify-content:space-around;
-  border-bottom: 1px dashed #2B4141;
+  //border-bottom: 1px dashed #2B4141;
 }
 .evt{
   padding-top:5%;
